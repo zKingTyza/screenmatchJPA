@@ -1,17 +1,19 @@
 package br.com.alura.screenmatch.model;
 
 public enum Categoria {
-    ACAO("Action"),
-    ROMANCE("Romance"),
-    COMEDIA("Comedy"),
-    DRAMA("Drama"),
-    CRIME("Crime"),
-    MISTERIO("Mystery");
+    ACAO("Action", "Ação"),
+    ROMANCE("Romance", "Romance"),
+    COMEDIA("Comedy", "Comédia"),
+    DRAMA("Drama", "Drama"),
+    CRIME("Crime", "Crime"),
+    MISTERIO("Mystery", "Mistério");
 
     private String categoriaOmdb;
+    private String categoriaPortugues;
 
-    Categoria(String categoriaOmdb){
+    Categoria(String categoriaOmdb, String categoriaPortugues){
         this.categoriaOmdb = categoriaOmdb;
+        this.categoriaPortugues = categoriaPortugues;
     }
 
     public static Categoria fromString(String text) {
